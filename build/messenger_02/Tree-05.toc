@@ -1,0 +1,8 @@
+('d:\\5-th semester\\ws\\ws_for_python\\kivy_projects\\venv\\share\\glew\\bin',
+ None,
+ [],
+ 'DATA',
+ [('glew32.dll',
+   'd:\\5-th '
+   'semester\\ws\\ws_for_python\\kivy_projects\\venv\\share\\glew\\bin\\glew32.dll',
+   'DATA')])

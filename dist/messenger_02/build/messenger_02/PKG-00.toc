@@ -1,0 +1,81 @@
+('D:\\5-th '
+ 'semester\\ws\\ws_for_python\\kivy_projects\\kivy_practical\\RSA_Messenger\\build\\messenger_02\\messenger_02.pkg',
+ {'BINARY': 1,
+  'DATA': 1,
+  'EXECUTABLE': 1,
+  'EXTENSION': 1,
+  'PYMODULE': 1,
+  'PYSOURCE': 1,
+  'PYZ': 0,
+  'SPLASH': 1},
+ [('PYZ-00.pyz',
+   'D:\\5-th '
+   'semester\\ws\\ws_for_python\\kivy_projects\\kivy_practical\\RSA_Messenger\\build\\messenger_02\\PYZ-00.pyz',
+   'PYZ'),
+  ('struct',
+   'D:\\5-th '
+   'semester\\ws\\ws_for_python\\kivy_projects\\kivy_practical\\RSA_Messenger\\build\\messenger_02\\localpycos\\struct.pyo',
+   'PYMODULE'),
+  ('pyimod01_os_path',
+   'd:\\5-th '
+   'semester\\ws\\ws_for_python\\kivy_projects\\venv\\lib\\site-packages\\PyInstaller\\loader\\pyimod01_os_path.pyc',
+   'PYMODULE'),
+  ('pyimod02_archive',
+   'd:\\5-th '
+   'semester\\ws\\ws_for_python\\kivy_projects\\venv\\lib\\site-packages\\PyInstaller\\loader\\pyimod02_archive.pyc',
+   'PYMODULE'),
+  ('pyimod03_importers',
+   'd:\\5-th '
+   'semester\\ws\\ws_for_python\\kivy_projects\\venv\\lib\\site-packages\\PyInstaller\\loader\\pyimod03_importers.pyc',
+   'PYMODULE'),
+  ('pyimod04_ctypes',
+   'd:\\5-th '
+   'semester\\ws\\ws_for_python\\kivy_projects\\venv\\lib\\site-packages\\PyInstaller\\loader\\pyimod04_ctypes.pyc',
+   'PYMODULE'),
+  ('pyiboot01_bootstrap',
+   'd:\\5-th '
+   'semester\\ws\\ws_for_python\\kivy_projects\\venv\\lib\\site-packages\\PyInstaller\\loader\\pyiboot01_bootstrap.py',
+   'PYSOURCE'),
+  ('pyi_rth_pkgutil',
+   'd:\\5-th '
+   'semester\\ws\\ws_for_python\\kivy_projects\\venv\\lib\\site-packages\\PyInstaller\\hooks\\rthooks\\pyi_rth_pkgutil.py',
+   'PYSOURCE'),
+  ('pyi_rth_inspect',
+   'd:\\5-th '
+   'semester\\ws\\ws_for_python\\kivy_projects\\venv\\lib\\site-packages\\PyInstaller\\hooks\\rthooks\\pyi_rth_inspect.py',
+   'PYSOURCE'),
+  ('pyi_rth__tkinter',
+   'd:\\5-th '
+   'semester\\ws\\ws_for_python\\kivy_projects\\venv\\lib\\site-packages\\PyInstaller\\hooks\\rthooks\\pyi_rth__tkinter.py',
+   'PYSOURCE'),
+  ('pyi_rth_kivy',
+   'd:\\5-th '
+   'semester\\ws\\ws_for_python\\kivy_projects\\venv\\lib\\site-packages\\PyInstaller\\hooks\\rthooks\\pyi_rth_kivy.py',
+   'PYSOURCE'),
+  ('pyi_rth_gstreamer',
+   'd:\\5-th '
+   'semester\\ws\\ws_for_python\\kivy_projects\\venv\\lib\\site-packages\\PyInstaller\\hooks\\rthooks\\pyi_rth_gstreamer.py',
+   'PYSOURCE'),
+  ('pyi_rth_win32api',
+   'd:\\5-th '
+   'semester\\ws\\ws_for_python\\kivy_projects\\venv\\lib\\site-packages\\PyInstaller\\hooks\\rthooks\\pyi_rth_win32api.py',
+   'PYSOURCE'),
+  ('pyi_rth_pkgres',
+   'd:\\5-th '
+   'semester\\ws\\ws_for_python\\kivy_projects\\venv\\lib\\site-packages\\PyInstaller\\hooks\\rthooks\\pyi_rth_pkgres.py',
+   'PYSOURCE'),
+  ('pyi_rth_multiprocessing',
+   'd:\\5-th '
+   'semester\\ws\\ws_for_python\\kivy_projects\\venv\\lib\\site-packages\\PyInstaller\\hooks\\rthooks\\pyi_rth_multiprocessing.py',
+   'PYSOURCE'),
+  ('messenger_02',
+   'D:\\5-th '
+   'semester\\ws\\ws_for_python\\kivy_projects\\kivy_practical\\RSA_Messenger\\messenger_02.py',
+   'PYSOURCE')],
+ True,
+ False,
+ False,
+ [],
+ None,
+ None,
+ None)

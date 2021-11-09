@@ -1,0 +1,208 @@
+WindowManager:
+    StartWindow:
+        id: start_win
+        name: "start"
+    MainWindow:
+        id: main_win
+    EncryptionWindow:
+        id: enc_win
+    DecryptionWindow:
+        id: dec_win
+    SendingWindow:
+        id: send_win
+
+<Button>
+    font_size: 25
+    size_hint: (0.25, 0.08)
+    font_name: 'fonts/ArchitectsDaughter-Regular.ttf'
+<TextInput>
+    size_hint: (0.95,0.3)
+    pos_hint: {"center_x":0.5, "center_y":0.78}
+    font_size:20
+    font_name: 'fonts/ZenKurenaido-Regular.ttf'
+
+<StartWindow>:
+    FloatLayout:
+        Label:
+            text: "Welcome!"
+            font_size: 32
+            pos_hint: {"center_x":0.5, "center_y":0.8}
+            font_name: 'fonts/RampartOne-Regular.ttf'
+
+        Label:
+            text: "This is our RSA Messenger!"
+            font_name: 'fonts/Italianno-Regular.ttf'
+            font_size:28
+            pos_hint: {"center_x":0.5, "center_y":0.65}
+
+        TextInput:
+            id: phone_number
+            size_hint: (0.8, 0.07)
+            pos_hint: {"center_x":0.5, "center_y":0.5}
+            hint_text: "Enter Mobile Number with Country Code..."
+
+
+        Button:
+            pos_hint: {"center_x":0.5, "center_y":0.2}
+            text: "start"
+            on_release:
+                app.root.current = "main"
+                root.manager.transition.direction = "up"
+                if phone_number.text: root.start()
+
+
+
+<MainWindow>:
+    name: "main"
+
+    FloatLayout:
+
+        Label:
+            text: "Encryption & Decryption"
+            font_size: 36
+            pos_hint: {"center_x":0.5, "center_y": 0.8}
+
+        Label:
+            text: "If you want to encrypt the plain text,\n then click the button Encrypt.\n If you want to decrypt the plain text,\n then click the button Decrypt. "
+            halign: "center"
+            font_size: 20
+            pos_hint: {"center_x":0.5, "center_y":0.6}
+
+        Button:
+            text: "Encrypt"
+            pos_hint:{"center_x":0.3, "top":0.3}
+            on_release:
+                app.root.current = "enc"
+                root.manager.transition.direction = "up"
+
+
+        Button:
+            text: "Decrypt"
+            pos_hint:{"center_x":0.7, "top":0.3}
+            on_release:
+                app.root.current = "dec"
+                root.manager.transition.direction = "up"
+
+        Button:
+            text: "Go back"
+            pos_hint:{"center_x":0.5, "top":0.15}
+            size_hint: (0.4, 0.08)
+            on_release:
+                app.root.current = "start"
+                root.manager.transition.direction = "down"
+
+
+
+
+<EncryptionWindow>:
+    name: "enc"
+
+    FloatLayout:
+        TextInput:
+            id: public_key
+            size_hint:(0.95, 0.07)
+            pos_hint: {"center_x":0.5, "center_y":0.95}
+            hint_text: "Enter the public key!"
+            font_size: 16
+
+        TextInput:
+            id: input
+            pos_hint: {"center_x":0.5, "center_y":0.77}
+            hint_text: "Enter your plain text..." if public_key.text else "We don't have public key!"
+
+        Button:
+            id: encrypt_msg
+            pos_hint: {"center_x":0.5, "center_y":0.55}
+            text: "Encrypt"
+            on_release: root.encryption()
+
+        TextInput:
+            id: output
+            hint_text: "Here is cipher text..."
+            pos_hint: {"center_x": 0.5, "center_y": 0.33}
+
+        Button:
+            pos_hint:{"center_x":0.2, "center_y":0.1}
+            text: "Main"
+            on_release:
+                app.root.current = "main"
+                root.manager.transition.direction = "down"
+
+        Button:
+            pos_hint:{"center_x":0.5, "center_y":0.1}
+            text: "Copy"
+
+
+        Button:
+            pos_hint:{"center_x":0.8, "center_y":0.1}
+            text: "Send"
+            on_release:
+                app.root.current = "send"
+                root.manager.transition.direction = "left"
+
+<DecryptionWindow>:
+    name: "dec"
+
+    FloatLayout:
+        Label:
+            size_hint:(1, 0.09)
+            pos_hint: {"center_x":0.5, "top":1}
+            text: "Enter the cipher text!"
+            font_size: 16
+
+        TextInput:
+            id: input_ci
+            hint_text: "Enter the cipher text..."
+
+        Button:
+            pos_hint: {"center_x":0.5, "center_y":0.55}
+            text: "Decrypt"
+            on_release: root.decryption()
+
+        TextInput:
+            id: output
+            hint_text: "Here is plain text..."
+            pos_hint: {"center_x": 0.5, "center_y": 0.33}
+
+        Button:
+            pos_hint:{"center_x":0.5, "center_y":0.1}
+            text: "Return"
+            on_release:
+                app.root.current = "main"
+                root.manager.transition.direction = "down"
+                root.clear_dec()
+
+
+<SendingWindow>:
+    name: "send"
+
+    FloatLayout:
+        Button:
+            pos_hint:{"center_x":0.5, "center_y":0.1}
+            text: "Return"
+            size_hint: (0.35, 0.1)
+            on_release:
+                app.root.current = "enc"
+                root.manager.transition.direction = "right"
+                root.clear_enc()
+
+        Button:
+            pos_hint:{"center_x":0.5, "center_y":0.75}
+            text: "via WhatsApp"
+            font_size:24
+            size_hint: (0.5, 0.1)
+            on_release: root.sending_via_whatsapp()
+
+        Button:
+            pos_hint:{"center_x":0.5, "center_y":0.55}
+            text: "via Telegram"
+            size_hint: (0.5, 0.1)
+            font_size:24
+            on_release:
+
+        Button:
+            pos_hint:{"center_x":0.5, "center_y":0.35}
+            text: "via ItsApp"
+            font_size:24
+            size_hint: (0.5, 0.1)
+            on_release:
